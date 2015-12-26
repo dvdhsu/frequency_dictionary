@@ -1,3 +1,4 @@
+# stores a list of words, as well as their character frequencies
 class FrequencyDictionary
   attr_reader :dict
 
@@ -5,11 +6,15 @@ class FrequencyDictionary
     @dict = Hash.new
   end
 
+  # add a word to the dictionary
   def add(word)
+    # calculate the character frequencies
     freq = to_hash word
+    # then map the word to it
     @dict[word] = freq
   end
 
+  # search for words with the same character frequencies
   def search(word)
     results = []
     freq = to_hash word
