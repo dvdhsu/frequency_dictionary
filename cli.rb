@@ -18,6 +18,8 @@ while true
     puts "Sorry, no results."
   else
     print "Results: "
-    puts anagram_dict.search word
+    print anagram_dict.search word
+    # newline after results
+    puts
   end
 end
